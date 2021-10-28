@@ -1,7 +1,5 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const server = require("http").createServer(app);
-const io = require("socket.io")(server, { cors: { origin: "*" } });
 
 
 var us = {};
@@ -56,7 +54,7 @@ app.get('/vie', (req, res) => {
     res.send('Wellcome TO VRam API.');
 })
 
-server.listen(3001, '192.168.1.4', () => {
+server.listen(3001, () => {
     console.log("Server running....");
 });
 
