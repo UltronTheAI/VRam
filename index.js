@@ -29,23 +29,23 @@ app.get('/', (req, res) => {
 // });
 
 server.listen(3001, () => {
-    console.log("Server running....");
+    //console.log("Server running....");
 });
 
 io.on("connection", (socket) => {
-    console.log("User connected... user id = " + socket.id);
+    //console.log("User connected... user id = " + socket.id);
 
     socket.on("message", (data) => {
-        console.log("User id = {" + data[0] + "} send : " + data[1]);
+        //console.log("User id = {" + data[0] + "} send : " + data[1]);
         socket.broadcast.emit('message', data);
         if (data[1] == 'Join the chat...'){
             use[socket.id] = data[0];
-            console.log('user Join ' + use[socket.id]);
+            //console.log('user Join ' + use[socket.id]);
         }
     });
     
     socket.on('disconnect', () =>{
-        console.log("User disconnected... user id = " + socket.id + "\t,\t" + use[socket.id]);
+        //console.log("User disconnected... user id = " + socket.id + "\t,\t" + use[socket.id]);
         socket.broadcast.emit("message", [use[socket.id], "Leave the chat..."]);
         delete use[socket.id];
         delete socket;
