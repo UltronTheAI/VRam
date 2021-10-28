@@ -13,7 +13,7 @@ app.get('/Ram', (req, res) => {
     var gu = us[ur[0]];
     
         res.send(gu['ram']);
-        console.log('User-Ram ' + ur[0]);
+        //('User-Ram ' + ur[0]);
     
 });
 
@@ -24,7 +24,7 @@ app.get('/RRam', (req, res) => {
     var gu = us[ur[0]];
     delete us[ur[0]];
         res.send('Done');
-        console.log('User-Remove ' + ur[0]);
+        //('User-Remove ' + ur[0]);
     
 });
 
@@ -33,7 +33,7 @@ app.get('/new-user', (req, res) => {
     gu = gu.replace('/new-user?', '').replace('&', ',').replace('=', '').replace('user', '');
     us[gu] = {"ram": {}};
     res.send('Done');
-    console.log('New-User ' + gu);
+    //('New-User ' + gu);
 });
 
 app.get('/set-ram', (req, res) => {
@@ -55,7 +55,7 @@ app.get('/vie', (req, res) => {
 })
 
 server.listen(3001, () => {
-    console.log("Server running....");
+    //("Server running....");
 });
 
 // var vram = {};
@@ -63,7 +63,7 @@ server.listen(3001, () => {
 // var name = '';
 
 // io.on("connection", (socket) => {
-//     // console.log("User connected... user id = " + socket.id);
+//     // //("User connected... user id = " + socket.id);
 //     if (user > 0){
 //         socket.emit('exit', 0);
 //     }
@@ -72,12 +72,12 @@ server.listen(3001, () => {
 //         name = socket.id;
 //     }
 //     socket.on("ADTR", (data) => {
-//         // console.log("User id = {" + data[0] + "} send : " + data[1]);
+//         // //("User id = {" + data[0] + "} send : " + data[1]);
         
 //     });
 
 //     socket.on("remove", (data) => {
-//         // console.log("User id = {" + data[0] + "} send : " + data[1]);
+//         // //("User id = {" + data[0] + "} send : " + data[1]);
         
 //     });
 
