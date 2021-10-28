@@ -50,7 +50,7 @@ app.get('/get-ram', (req, res) => {
     res.send(us[gu[0]]['ram'][gu[1]]);
 });
 
-app.get('/vie', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Wellcome TO VRam API.');
 })
 
