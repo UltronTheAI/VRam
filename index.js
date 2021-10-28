@@ -54,9 +54,7 @@ app.get('/vie', (req, res) => {
     res.send('Wellcome TO VRam API.');
 })
 
-server.listen(3001, () => {
-    //("Server running....");
-});
+server.listen(process.env.PORT || 5000);
 
 // var vram = {};
 // var user = 0;
